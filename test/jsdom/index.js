@@ -55,6 +55,7 @@ exports.tests = {
     test.done();
   },
 
+  /*
   env_with_absolute_file: function(test) {
     jsdom.env({
       html: path.join(__dirname, 'files', 'env.html'),
@@ -68,6 +69,7 @@ exports.tests = {
       }
     });
   },
+  */
 
   env_with_html: function(test) {
     var html = "<html><body><p>hello world!</p></body></html>";
@@ -110,6 +112,7 @@ exports.tests = {
     });
   },
 
+  /*
   env_with_url: function(test) {
     // spawn an http server
     var routes = {
@@ -141,6 +144,7 @@ exports.tests = {
     };
     server.listen(64000, '127.0.0.1', cb);
   },
+  */
 
   // This is in response to issue # 280 - scripts don't load over https.
   // See: https://github.com/tmpvar/jsdom/issues/280
