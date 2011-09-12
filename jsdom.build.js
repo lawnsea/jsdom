@@ -4,7 +4,8 @@
     dir: 'build',
     modules: [
         {
-            name: 'main'
+            name: 'jsdom'
         }
-    ]
+    ],
+    optimize: 'none'
 })
