@@ -9,7 +9,11 @@
   }
 
   require(['jsdom'], function(jsdom) {
-      var doc = jsdom.jsdom("<html><head></head><body>hello world</body></html>"),
+      var doc = jsdom.jsdom("<html><head></head><body>hello world</body></html>", null, {
+            features: {
+              QuerySelector: true
+            }
+          }),
           win = doc.createWindow(),
           p;
 
@@ -32,6 +36,7 @@
       console.log(p.style);
       p.id = 'foo';
       p.title = 'bar';
+      console.log(doc.body.innerHTML);
   });
   </script>
 </body>
